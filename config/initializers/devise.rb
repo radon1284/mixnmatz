@@ -248,13 +248,14 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-  if Rails.env.production?
-    config.omniauth :facebook, 'FACEBOOK_APP_ID_PRO', 'FACEBOOK_SECRET_KEY_PRO',
+  # if Rails.env.production?
+  #   config.omniauth :facebook, ENV['FACEBOOK_APP_ID_PRO'], ENV['FACEBOOK_SECRET_KEY_PRO'],
                 
-  else
-    config.omniauth :facebook, 'FACEBOOK_APP_ID', 'FACEBOOK_SECRET_KEY',
+  # else
+  #   config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_SECRET_KEY'],
                 
-  end
+  # end
+  config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_SECRET_KEY'], callback_url: ENV['CALLBACK_URL']
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
