@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-generators', '~> 3.3.4'
 gem 'koala'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
+gem 'omniauth-facebook'
 
 group :development, :test do
   gem 'byebug', platform: :mri
