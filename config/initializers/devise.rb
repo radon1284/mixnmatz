@@ -250,10 +250,10 @@ Devise.setup do |config|
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
   if Rails.env.production?
     config.omniauth :facebook, 'FACEBOOK_APP_ID_PRO', 'FACEBOOK_SECRET_KEY_PRO',
-                callback_url: "CALLBACK_URL_PRO"
+                
   else
     config.omniauth :facebook, 'FACEBOOK_APP_ID', 'FACEBOOK_SECRET_KEY',
-                callback_url: "CALLBACK_URL"
+                
   end
 
   # ==> Warden configuration
