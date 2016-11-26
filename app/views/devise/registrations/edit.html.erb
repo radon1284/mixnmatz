@@ -11,7 +11,7 @@
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
-
+<% if f.object.encrypted_password.present? %>
   <div class="form-group">
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
@@ -20,7 +20,7 @@
       <em><%= @minimum_password_length %> characters minimum</em>
     <% end %>
   </div>
-<% if f.object.encrypted_password.present? %>
+
   <div class="form-group">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
