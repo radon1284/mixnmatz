@@ -1,0 +1,7 @@
+development:
+  app_id: "1264132700300122"
+  secret_key: "fa29373bdbda9c74b5cd012c1539d908"
+test:
+  ...
+production:
+  ...
