@@ -1,4 +1,5 @@
 # mixnmatz
 
 Digital Profiling
-link [https://mixnmatz.herokuapp.com/]
+
+Mix n Matz: [https://mixnmatz.herokuapp.com/]
